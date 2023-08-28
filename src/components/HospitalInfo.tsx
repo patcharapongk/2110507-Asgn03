@@ -23,7 +23,7 @@ const hospitals = [
 
 const HospitalInfo = () => {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col justify-center items-center">
       <h1 className="text-3xl font-bold text-center my-8">
         {" "}
         โรงพยาบาลที่มีวัคซีน COVID-19 ใกล้กรุงเทพมหานคร
