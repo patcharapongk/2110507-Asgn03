@@ -9,12 +9,9 @@ export default function InfoCard({
   description: string;
   imgSrc: string;
 }) {
-  // const hospitalTitle = `${title
-  //   .substring(0, 1)
-  //   .toUpperCase()}${title.substring(1)} Hospital`;
   return (
-    <div className="mt-2 h-full w-full flex justify-center">
-      <div className="flex bg-white max-w-[700px] rounded-lg shadow-lg ">
+    <div className="mt-2 h-[250px] w-full flex justify-center">
+      <div className="flex bg-white max-w-[750px] rounded-lg shadow-lg ">
         <div className="relative w-[300px] shrink-0 ">
           <Image
             className="w-full h-full rounded-l-lg object-cover"
@@ -27,10 +24,10 @@ export default function InfoCard({
         </div>
         <div className="w-full flex flex-col justify-center p-8 gap-4">
           <h3 className="text-xl font-bold">{title}</h3>
-          <p>{description}</p>
+          <p className="truncate whitespace-pre-wrap block">{description}</p>
           <p>
             <a href="#0" className="text-blue-500 hover:underline">
-              อ่านต่อ{" "}
+              อ่านต่อ
             </a>
           </p>
         </div>
