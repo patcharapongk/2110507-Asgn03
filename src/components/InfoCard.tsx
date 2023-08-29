@@ -1,31 +1,34 @@
 import Image from "next/image";
-import styles from "./infocard.module.css";
 
-export default function InfoCard() {
+export default function InfoCard({
+  title,
+  description,
+  imgSrc,
+}: {
+  title: string;
+  description: string;
+  imgSrc: string;
+}) {
   return (
-    <div className={styles.wrap}>
-      <div className={styles.card}>
-        <div className={styles.card_pic_wrap}>
+    <div className="mt-2 h-[250px] w-full flex justify-center">
+      <div className="flex bg-white max-w-[750px] rounded-lg shadow-lg ">
+        <div className="relative w-[300px] shrink-0 ">
           <Image
-            className={styles.card_pic_wrap_img}
-            src="/img/vaccine.jpg"
-            alt="Coronavirus Vaccine"
-            fill
-            objectFit="cover"
+            className="w-full h-full rounded-l-lg object-cover"
+            src={imgSrc}
+            alt={title}
+            height="0"
+            width="0"
+            sizes="100vw"
           />
         </div>
-        <div className={styles.card_content}>
-          <h3>mRNA Vaccine </h3>
+        <div className="w-full flex flex-col justify-center p-8 gap-4">
+          <h3 className="text-xl font-bold">{title}</h3>
+          <p className="truncate whitespace-pre-wrap block">{description}</p>
           <p>
-            วัคซีน COVID-19 ช่วยเสริมสร้างภูมิคุ้มกันให้ร่างกาย
-            เพื่อป้องกันการติดเชื้อและลดความรุนแรงของโรค
-            วัคซีนผ่านการทดสอบทางวิทยาศาสตร์อย่างเข้มงวด
-            และผ่านการรับรองจากองค์กรสากล
-            เราขอเชิญคุณมาร่วมสร้างสังคมที่ปลอดภัยและสุขภาพดีขึ้น
-            รับวัคซีนตอนนี้!
-          </p>
-          <p>
-            <a href="#0">อ่านต่อ </a>
+            <a href="#0" className="text-blue-500 hover:underline">
+              อ่านต่อ
+            </a>
           </p>
         </div>
       </div>
