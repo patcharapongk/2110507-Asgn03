@@ -1,4 +1,5 @@
 import Image from "next/image";
+import InteractiveCard from "./InteractiveCard";
 
 export default function InfoCard({
   title,
@@ -10,7 +11,7 @@ export default function InfoCard({
   imgSrc: string;
 }) {
   return (
-    <div className="mt-2 h-[250px] w-full flex justify-center">
+    <InteractiveCard>
       <div className="flex bg-white max-w-[750px] rounded-lg shadow-lg ">
         <div className="relative w-[300px] shrink-0 ">
           <Image
@@ -32,6 +33,6 @@ export default function InfoCard({
           </p>
         </div>
       </div>
-    </div>
+    </InteractiveCard>
   );
 }

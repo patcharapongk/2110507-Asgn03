@@ -1,4 +1,4 @@
-import InfoCard from "@/components/InfoCard";
+import InfoCard from "@/components/InfoCard/InfoCard";
 
 const hospitals = [
   {
