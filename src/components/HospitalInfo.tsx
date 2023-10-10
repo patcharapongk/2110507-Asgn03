@@ -23,12 +23,12 @@ const hospitals = [
 
 const HospitalInfo = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center">
+    <div className="h-screen flex flex-col justify-around items-center w-[90%] mx-auto">
       <h1 className="text-3xl font-bold text-center my-8">
         {" "}
         โรงพยาบาลที่มีวัคซีน COVID-19 ใกล้กรุงเทพมหานคร
       </h1>
-      <div className="flex flex-col gap-8 my-4">
+      <div className="flex flex-row gap-8 my-4 ">
         {hospitals.map((hospital) => (
           <InfoCard
             key={hospital.title}
@@ -38,6 +38,7 @@ const HospitalInfo = () => {
           />
         ))}
       </div>
+      <div> </div>
     </div>
   );
 };

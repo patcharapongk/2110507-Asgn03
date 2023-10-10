@@ -12,8 +12,8 @@ export default function InfoCard({
 }) {
   return (
     <InteractiveCard>
-      <div className="flex bg-white max-w-[750px] rounded-lg shadow-lg ">
-        <div className="relative w-[300px] shrink-0 ">
+      <div className="flex flex-col bg-white max-w-[750px] rounded-lg shadow-lg min-h-[600px]  items-center">
+        <div className=" w-full shrink-0 ">
           <Image
             className="w-full h-full rounded-l-lg object-cover"
             src={imgSrc}

@@ -18,7 +18,7 @@ const InteractiveCard = ({ children }: { children: React.ReactNode }) => {
   }
   return (
     <div
-      className="mt-2 h-[250px] w-full flex justify-center"
+      className=""
       onMouseOver={(e) => onMouseAction(e)}
       onMouseOut={(e) => onMouseAction(e)}
     >
