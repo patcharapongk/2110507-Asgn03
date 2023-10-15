@@ -1,4 +1,4 @@
-import Banner from "@/components/Banner";
+import Banner from "@/components/Banner/Banner";
 import { notoSansThai } from "../utils/fonts";
 import HospitalInfo from "@/components/HospitalInfo/HospitalInfo";
 export default function Home() {
