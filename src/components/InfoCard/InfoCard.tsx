@@ -1,14 +1,19 @@
 import Image from "next/image";
 import InteractiveCard from "./InteractiveCard";
+import RatingSection from "./RatingSection";
 
 export default function InfoCard({
   title,
   description,
   imgSrc,
+  rating,
+  onCompare,
 }: {
   title: string;
   description: string;
   imgSrc: string;
+  rating: number;
+  onCompare: Function;
 }) {
   return (
     <InteractiveCard>
@@ -32,6 +37,7 @@ export default function InfoCard({
             </a>
           </p>
         </div>
+        <RatingSection title={title} rating={rating} onCompare={onCompare} />
       </div>
     </InteractiveCard>
   );
