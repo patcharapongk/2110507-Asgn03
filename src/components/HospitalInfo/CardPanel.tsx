@@ -54,7 +54,7 @@ const CardPanel = () => {
           />
         ))}
       </div>
-      <div className="my-16 flex flex-row gap-4  justify-center ">
+      <div className="my-16 flex flex-col gap-4 items-center justify-center ">
         <h2 className="text-2xl font-bold"> คะแนนของโรงพยาบาล </h2>
         <div className="flex flex-col gap-2">
           {Array.from(cardRatings).map(([title, rating]) => {
