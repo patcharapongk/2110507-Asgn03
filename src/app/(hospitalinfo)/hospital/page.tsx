@@ -1,4 +1,4 @@
-import CardPanel from "./CardPanel";
+import CardPanel from "@/components/HospitalInfo/CardPanel";
 
 const HospitalInfo = () => {
   return (
