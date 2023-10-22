@@ -1,7 +1,7 @@
 "use client";
 
-import hospitals from "../../data/hospitalData";
 import InfoCard from "@/components/InfoCard/InfoCard";
+import { hospitals } from "@/data/hospitalData";
 import { useReducer } from "react";
 const CardPanel = () => {
   const cardReducer = (
