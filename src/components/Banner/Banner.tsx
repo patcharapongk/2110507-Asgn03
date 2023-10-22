@@ -1,6 +1,12 @@
+"use client";
+import { useRouter } from "next/navigation";
 import BannerImg from "./BannerImg";
 
 export default function Banner() {
+  const router = useRouter();
+  const handleClick = (e: React.SyntheticEvent) => {
+    router.push("/hospital");
+  };
   return (
     <div className="relative w-screen h-[95vh] my-0 mx-auto">
       <div className="relative my-0 mx-auto h-full w-full">
@@ -22,6 +28,14 @@ export default function Banner() {
             จองคิววันนี้
           </button>
         </div>
+      </div>
+      <div className="absolute bottom-8 right-3">
+        <button
+          className="py-[.688rem] px-4 inline-flex justify-center items-center gap-2 rounded-md border-2 border-gray-200 bg-white font-semibold text-blue-500"
+          onClick={handleClick}
+        >
+          ดูโรงพยาบาลทั้งหมด
+        </button>
       </div>
     </div>
   );
