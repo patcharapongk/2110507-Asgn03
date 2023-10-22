@@ -38,9 +38,7 @@ const CardPanel = () => {
         {hospitals.map((hospital) => (
           <InfoCard
             key={hospital.title}
-            title={hospital.title}
-            description={hospital.description}
-            imgSrc={hospital.imgSrc}
+            hospital={hospital}
             rating={cardRatings.get(hospital.title) || 0}
             onCompare={(title: string, rating: number) =>
               dispatchCardRatings({

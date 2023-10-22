@@ -1,17 +1,15 @@
 import Image from "next/image";
 import InteractiveCard from "./InteractiveCard";
 import RatingSection from "./RatingSection";
+import { HospitalType } from "@/data/hospitalData";
+import Link from "next/link";
 
 export default function InfoCard({
-  title,
-  description,
-  imgSrc,
+  hospital: { hid, title, description, imgSrc },
   rating,
   onCompare,
 }: {
-  title: string;
-  description: string;
-  imgSrc: string;
+  hospital: HospitalType;
   rating: number;
   onCompare: Function;
 }) {
@@ -32,9 +30,12 @@ export default function InfoCard({
           <h3 className="text-xl font-bold">{title}</h3>
           <p className="truncate whitespace-pre-wrap block">{description}</p>
           <p>
-            <a href="#0" className="text-blue-500 hover:underline">
+            <Link
+              href={`/hospital/${hid}`}
+              className="text-blue-500 hover:underline"
+            >
               อ่านต่อ
-            </a>
+            </Link>
           </p>
         </div>
         <RatingSection title={title} rating={rating} onCompare={onCompare} />
