@@ -2,7 +2,8 @@ import { hospitals, HospitalType } from "@/data/hospitalData";
 import Image from "next/image";
 
 const HospitalInfo = ({ params }: { params: { hid: string } }) => {
-  let hospital = hospitals.find((hospital) => hospital.hid === params.hid);
+  const hospital: HospitalType | null =
+    hospitals.find((hospital) => hospital.hid === params.hid) || null;
   if (!hospital) {
     return (
       <div className="flex justify-center items-center flex-col gap-2">
