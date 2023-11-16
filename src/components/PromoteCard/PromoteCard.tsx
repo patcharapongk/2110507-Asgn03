@@ -2,9 +2,13 @@
 import { Button } from "@mui/material";
 import VideoPlayer from "./VideoPlayer";
 import { useState } from "react";
+import useWindowListener from "@/hooks/useWindowListener";
 
 const PromoteCard = () => {
   const [playing, setPlaying] = useState<boolean>(false);
+  useWindowListener("contextmenu", (e: Event) => {
+    e.preventDefault();
+  });
   return (
     <div className="flex ">
       <VideoPlayer vdoSrc="/video/getvaccine.mp4" isPlaying={playing} />
